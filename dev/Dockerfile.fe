@@ -1,0 +1,15 @@
+FROM nginx:latest
+
+LABEL developer=ElliottLamarArnold
+
+WORKDIR /usr/share/nginx/html
+
+COPY build /usr/share/nginx/html
+
+ENV REACT_APP_LOGIN=http://localHost:9000/login
+ENV REACT_APP_GET_POSTS=http://localhost:9000/v1/linkedIn/post
+ENV REACT_APP_ADD_POST=http://localhost:9000/v1/linkedIn/addPost
+
+EXPOSE 80
+
+# docker build . -f Dockerfile.fe  -t si3mshady/linkedin_clone-fe:1
