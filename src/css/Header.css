@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  background-color: white;
+}
+
+.header__left {
+  display: flex;
+}
+
+.header__left > img {
+  object-fit: contain;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header__search {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border: none;
+  height: 22px;
+  color: gray;
+  background-color: whitesmoke;
+
+  border-radius: 6px;
+}
+
+.header__search > input {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.header__right {
+  display: flex;
+}
+
+.headerOption__title {
+    font-size:12px;
+    font-weight: 400;
+}
