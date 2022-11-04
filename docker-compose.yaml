@@ -1,7 +1,7 @@
 services:
   linkedinfrontend:
     build:
-      context: .
+      context: ./dev
       dockerfile: Dockerfile.fe
     ports:
       - "3000:3000"    
