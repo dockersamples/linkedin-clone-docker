@@ -6,7 +6,7 @@ WORKDIR /usr/share/nginx/html
 
 COPY build /usr/share/nginx/html
 
-ENV REACT_APP_LOGIN=http://localHost:9000/login
+ENV REACT_APP_LOGIN=http://localhost:9000/login
 ENV REACT_APP_GET_POSTS=http://localhost:9000/v1/linkedIn/post
 ENV REACT_APP_ADD_POST=http://localhost:9000/v1/linkedIn/addPost
 

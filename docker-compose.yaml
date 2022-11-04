@@ -7,6 +7,8 @@ services:
       - "3000:3000"    
     depends_on:
       - db
+    networks:
+      - linkedinnet
   nodebackend: 
     build:
       context: ./server
@@ -15,11 +17,19 @@ services:
       - "9000:9000"    #external:internal 
     depends_on:
       - db
+    networks:
+      - linkedinnet
   db:
     volumes:
       - linkedin_db:/data/db
     image: mongo:latest
     ports:
-      - "27017:27017"  
+      - "27017:27017"
+    networks:
+      - linkedinnet  
+
 volumes:
    linkedin_db:
+
+networks:
+  linkedinnet:
