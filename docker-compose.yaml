@@ -4,7 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile.fe
     ports:
-      - "3000:3000"    
+      - "3000:3000"  
+      - "80:80"
     depends_on:
       - db
     networks:
